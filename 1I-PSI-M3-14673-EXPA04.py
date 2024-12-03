@@ -6,7 +6,7 @@ def registar_pedido(pedidos):
   pedidos[id_pedido] = {"descricao": descricao, "estado": estado}
   print(f"Pedido #{id_pedido} registado com sucesso!")
 
-#Função para eliminar o pedido
+#Função para eliminar um pedido
 def eliminar_pedido(pedidos):
     id_pedido = int(input("ID do pedido a eliminar: "))
     if id_pedido in pedidos:
@@ -14,7 +14,7 @@ def eliminar_pedido(pedidos):
         print(f"Pedido #{id_pedido} eliminado com sucesso!")
     else:
         print("Não foi possivel eliminar o pedido")
-#Função para consultar o pedido
+#Função para consultar um pedido
 def consultar_pedido(pedidos):
   id_pedido = int(input("ID do pedido a consultar: "))
   if id_pedido in pedidos:
@@ -23,7 +23,7 @@ def consultar_pedido(pedidos):
   else:
       print("Pedido não encontrado.")
 
-#Função para atualizar o estado
+#Função para atualizar um estado
 def atualizar_estado(pedidos):
   id_pedido = int(input("ID do pedido a atualizar: "))
   if id_pedido in pedidos:
@@ -36,14 +36,14 @@ def atualizar_estado(pedidos):
   else:
       print("Pedido não encontrado.")
 
-#Função para exibir o pedido
+#Função para exibir um pedido
 def exibir_pedidos(pedidos):
   print("\nLista de Pedidos:")
   print("ID\tDescrição\t\tEstado")
   print("-" * 40)
   for id_pedido, info in pedidos.items():
       print(f"{id_pedido}\t{info['descricao'][:15]}\t\t{info['estado']}")
-
+#Função para exibir o menu
 def main():
   pedidos = {}
   while True:
